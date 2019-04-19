@@ -2,18 +2,30 @@ import React, { Component } from 'react'
 import AllOpenOrders from '../../PickupRequest/AllOpenOrders';
 import AllAcceptedOrders from '../../PickupRequest/AllAcceptedOrders';
 import AllCompletedOrders from '../../PickupRequest/AllCompletedOrders';
+import OrderForm from '../../OrderForm/OrderForm';
 import MapContainer from '../../Map/MapContainer';
+import MapMarker from '../../Map/MapMarker'
 import './DriverView.css'
 import '../../PickupRequest/PickupRequest.css'
 
 
 export class DriverView extends Component {
   render() {
+    console.log(this.props.locationStart)
     return (
       <React.Fragment>
-        <div className="driverMap">
-           <MapContainer x/>
-        </div>
+        
+        <div className="mapMarkers" >
+                  <MapMarker
+                  origin = {this.props.locationStart} 
+                  
+                  
+                  />
+                 
+                  
+              </div>
+              
+              
         <div className="rest">
         <AllAcceptedOrders
             allAcceptedOrders={this.props.allAcceptedOrders}

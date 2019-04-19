@@ -16,7 +16,7 @@ import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-map
     defaultZoom={8}
     defaultCenter={{ lat: 39.9611755, lng: -82.9987942 }}
   >
-    {props.isMarkerShown && <Marker position={{ lat: 39.9611755, lng: -82.9987942 }} onClick={props.onMarkerClick} />}
+    
     {props.isMarkerShown && <Marker position={{ lat: 38.9611755, lng: -82.9987942 }} onClick={props.onMarkerClick} />}
     {props.isMarkerShown && <Marker position={{ lat: 39.9611755, lng: -81.9987942 }} onClick={props.onMarkerClick} />}
   </GoogleMap>

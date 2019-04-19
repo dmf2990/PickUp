@@ -18,7 +18,8 @@ class App extends Component {
         allAcceptedOrderUser: [],
         allCompletedOrders: [],
         allOpenOrdersUser: [],
-        currentLocation: "home"
+        currentLocation: "home",
+        locationStart: {}
       };
     
   }
@@ -73,10 +74,13 @@ class App extends Component {
     })
       .then(res => res.json())
       .then(data => {
-        this.setState({ 
+        this.setState({
           allOpenOrders: data, 
-          allOpenOrdersUser: data
+          allOpenOrdersUser: data,
+          locationStart
          });
+
+         console.log(this.state.locationStart)
       });
       this.setState({ currentLocation: "user" });
   };
@@ -152,6 +156,7 @@ class App extends Component {
               allOpenOrders={this.state.allOpenOrders}
               assignOrder={this.assignOrder}
               allCompletedOrders={this.state.allCompletedOrders}
+              locationStart={this.state.locationStart}
             />
           )} 
         </div>
