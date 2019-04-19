@@ -14,6 +14,7 @@ import MapGeoLocator from "./MapGeoLocator"
   withGoogleMap
 )((props) =>
   <GoogleMap
+    style={{}}
     defaultZoom={8}
     defaultCenter={{ lat: 39.9611755, lng: -82.9987942 }}
   >
